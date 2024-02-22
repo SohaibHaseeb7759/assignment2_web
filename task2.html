@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function submittion() {
+        let password = document.getElementById("pa").value;
+        let confirmPassword = document.getElementById("con").value;
+        if (password !== confirmPassword) {
+          alert("Password is not matching");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <form onsubmit="return submittion()">
+      <lable for="user">User</lable>
+      <input
+        type="text"
+        id="user"
+        name="user"
+        maxlength="15"
+        minlength="2"
+        pattern="[A-Za-z]{3}"
+        required
+      />
+      <br />
+      <lable for="email">Email</lable>
+      <input
+        type="email"
+        maxlength="30"
+        minlength="2"
+        id="email"
+        name="email"
+        required
+      />
+      <br />
+      <lable for="pa">Password</lable>
+      <input
+        type="password"
+        maxlength="15"
+        minlength="2"
+        id="pa"
+        name="pa"
+        required
+      />
+      <br />
+      <lable for="co">Confirm Password</lable>
+      <input
+        type="password"
+        maxlength="15"
+        minlength="2"
+        id="con"
+        name="con"
+        required
+      />
+      <br />
+      <input type="button" value="Reset" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
